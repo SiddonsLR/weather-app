@@ -41,32 +41,6 @@ async function checkWeather(city){
     }
     console.log(data)
 
-    document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp)  + "F&deg;";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = Math.round(data.wind.speed )+ "mph";
-
-    if(data.weather[0].main == "Clear"){
-        weatherIcons.src="images/clear.png";
-    }
-    else if(data.weather[0].main == "Clouds" ){
-        weatherIcons.src="images/clouds.png";
-    }
-    else if(data.weather[0].main == "Drizzle" ){
-        weatherIcons.src="images/drizzle.png";
-    }
-    else if(data.weather[0].main == "Mist" ){
-        weatherIcons.src="images/mist.png";
-    }
-    else if(data.weather[0].main == "Rain" ){
-        weatherIcons.src="images/rain.png";
-    }
-    else if(data.weather[0].main == "Snow" ){
-        weatherIcons.src="images/snow.png";
-    }
-    document.querySelector(".weather").style.display = "block";
-  
-
 }
 
 searchBtn.addEventListener("click", ()=>{
